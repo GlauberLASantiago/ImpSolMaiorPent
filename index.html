@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improvisação em Sol Maior</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom styles and color palette setup */
+        :root {
+            --bg-light: #E7F0C7;
+            --brand-green: #BCDFB9;
+            --brand-rose: #C87F8B;
+            --brand-apricot: #E9A97F;
+            --text-dark: #000000;
+            --text-light: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Custom classes for Tailwind */
+        .bg-brand-green { background-color: var(--brand-green); }
+        .bg-brand-rose { background-color: var(--brand-rose); }
+        .bg-brand-apricot { background-color: var(--brand-apricot); }
+        .text-brand-rose { color: var(--brand-rose); }
+        .border-brand-apricot { border-color: var(--brand-apricot); }
+
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Nav active state */
+        nav a.active {
+            color: var(--brand-rose);
+            font-weight: 700;
+            transform: scale(1.1);
+        }
+
+        /* Animation for elements scrolling into view */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom audio player styles */
+        audio {
+            width: 100%;
+            margin-top: 8px;
+            border-radius: 50px;
+            filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) brightness(99%);
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-brand-rose">Glauber Santiago</h1>
+            <nav id="nav-menu" class="hidden md:flex space-x-4 lg:space-x-6 items-center text-sm lg:text-base">
+                <a href="#introducao" class="hover:text-brand-rose transition-colors duration-300">Introdução</a>
+                <a href="#ferramentas" class="hover:text-brand-rose transition-colors duration-300">Ferramentas</a>
+                <a href="#pentatonicas" class="hover:text-brand-rose transition-colors duration-300">Pentatônicas</a>
+                <a href="#exercicios" class="hover:text-brand-rose transition-colors duration-300">Exercícios</a>
+                <a href="#finalizacao" class="hover:text-brand-rose transition-colors duration-300">Finalização</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95">
+            <a href="#introducao" class="block text-center py-3 hover:bg-brand-green transition-colors duration-300">Introdução</a>
+            <a href="#ferramentas" class="block text-center py-3 hover:bg-brand-green transition-colors duration-300">Ferramentas</a>
+            <a href="#pentatonicas" class="block text-center py-3 hover:bg-brand-green transition-colors duration-300">Pentatônicas</a>
+            <a href="#exercicios" class="block text-center py-3 hover:bg-brand-green transition-colors duration-300">Exercícios</a>
+            <a href="#finalizacao" class="block text-center py-3 hover:bg-brand-green transition-colors duration-300">Finalização</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Section: Introducao -->
+        <section id="introducao" class="mb-20 scroll-mt-20">
+            <div class="text-center reveal">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Improvisação em <span class="text-brand-rose">Sol Maior</span> com Pentatônicas</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-700">Este material foi elaborado especialmente para músicos iniciantes no universo da improvisação musical, com foco na tonalidade de Sol Maior.</p>
+                <a href="ImpSolMaiorPent.pdf" class="inline-block bg-brand-apricot text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-download mr-2"></i> Baixar Partituras (PDF)
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-16">
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-2xl mb-4 text-brand-rose">🎼 Importante sobre a tonalidade</h3>
+                    <p class="mb-4">Este material está escrito na tonalidade de <strong>Sol Maior (G)</strong> para instrumentos em Dó (como violão, guitarra, piano, teclado, flauta, baixo e voz).</p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-800">
+                        <li>Para instrumentos em <strong>Si♭ (B♭)</strong>, a tonalidade correspondente será <strong>Lá Maior (A)</strong>.</li>
+                        <li>Para instrumentos em <strong>Mi♭ (E♭)</strong>, a tonalidade correspondente será <strong>Mi Maior (E)</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-2xl mb-4 text-brand-rose">Objetivo do Curso</h3>
+                    <p class="mb-4">Nosso objetivo é capacitar os alunos a improvisar de forma consciente, simples e musical, utilizando escalas, arpejos e pentatônicas, para que possam tocar livremente sobre progressões harmônicas comuns, especialmente no contexto gospel e worship.</p>
+                </div>
+            </div>
+            
+            <div class="card p-6 rounded-2xl shadow-lg mt-8 reveal">
+                <h3 class="font-bold text-2xl mb-4 text-brand-rose">Estrutura do Material</h3>
+                <p>O conteúdo está dividido em seções progressivas, pensadas para preparar técnica e musicalmente os alunos antes de entrar na improvisação propriamente dita. Cada etapa traz uma explicação teórica acompanhada de exercícios práticos.</p>
+            </div>
+        </section>
+
+        <!-- Section: Ferramentas (Escalas e Arpejos) -->
+        <section id="ferramentas" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Ferramentas Essenciais: Escalas e Arpejos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- A. Escala de Sol Maior -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-2xl mb-3"><span class="text-brand-apricot">A.</span> Escala de Sol Maior</h3>
+                    <p class="mb-4">Iniciamos com a escala básica da tonalidade. O objetivo é ganhar familiaridade com os sons.</p>
+                    <p class="font-mono text-center bg-brand-green p-3 rounded-lg">Sol – Lá – Si – Dó – Ré – Mi – Fá# – Sol</p>
+                </div>
+                <!-- B. Escala Geral -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-2xl mb-3"><span class="text-brand-apricot">B.</span> Escala Geral</h3>
+                    <p>Aqui, estendemos a escala de Sol Maior por toda a extensão do instrumento, para explorar todo o seu potencial expressivo.</p>
+                </div>
+                <!-- C. Arpejos das Tríades -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-2xl mb-3"><span class="text-brand-apricot">C.</span> Arpejos das Tríades</h3>
+                    <p class="mb-4">São apresentados os arpejos das tríades (graus I a VI) para reconhecimento auditivo e visual dos acordes.</p>
+                    <p class="font-mono text-sm text-center bg-brand-green p-3 rounded-lg">Exemplo G (I): Sol – Si – Ré – Si – Sol</p>
+                </div>
+                <!-- D. Arpejos das Tétrades -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-2xl mb-3"><span class="text-brand-apricot">D.</span> Arpejos das Tétrades</h3>
+                    <p class="mb-4">Agora incluímos a sétima nos acordes, formando tétrades, aproximando o conteúdo da harmonia worship.</p>
+                    <p class="font-mono text-sm text-center bg-brand-green p-3 rounded-lg">Exemplo Gmaj7 (I): Sol – Si – Ré – Fá# – Ré – Si – Sol</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Pentatonicas -->
+        <section id="pentatonicas" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">O Poder das Pentatônicas</h2>
+            
+            <!-- E. Pentatônicas Maior e Menor -->
+            <div class="card p-6 rounded-2xl shadow-lg mb-8 reveal">
+                <h3 class="font-bold text-2xl mb-3"><span class="text-brand-rose">E.</span> Escalas Pentatônicas Maior e Menor</h3>
+                <p class="mb-4">Comparamos as pentatônicas de Sol Maior e Sol Menor. Elas são simples, sem notas dissonantes, e funcionam bem em vários contextos harmônicos.</p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1 bg-brand-green/70 p-3 rounded-lg">
+                        <p class="font-semibold">Pentatônica Maior de G:</p>
+                        <p class="font-mono">Sol – Lá – Si – Ré – Mi</p>
+                    </div>
+                    <div class="flex-1 bg-brand-green/70 p-3 rounded-lg">
+                        <p class="font-semibold">Pentatônica Menor de G:</p>
+                        <p class="font-mono">Sol – Sib – Dó – Ré – Fá</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- F. I e VI Graus -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-xl mb-3"><span class="text-brand-rose">F.</span> Pentatônicas do I e VI Graus</h3>
+                    <p class="mb-4 text-sm">A pentatônica maior do I grau (G) e a menor do VI grau (Em) contêm as mesmas notas. São duas formas de ver a mesma "paleta" de sons.</p>
+                    <div class="space-y-2 text-sm">
+                        <p class="font-mono bg-brand-green/70 p-2 rounded"><strong>G Maior:</strong> Sol – Lá – Si – Ré – Mi</p>
+                        <p class="font-mono bg-brand-green/70 p-2 rounded"><strong>Em Menor:</strong> Mi – Sol – Lá – Si – Ré</p>
+                    </div>
+                </div>
+                <!-- G. IV e II Graus -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-xl mb-3"><span class="text-brand-rose">G.</span> Pentatônicas do IV e II Graus</h3>
+                    <p class="mb-4 text-sm">Aqui trabalhamos com C Maior (IV) e Am Menor (II). Novamente, mesmas notas com enfoques diferentes, ampliando as possibilidades.</p>
+                    <div class="space-y-2 text-sm">
+                        <p class="font-mono bg-brand-green/70 p-2 rounded"><strong>C Maior:</strong> Dó – Ré – Mi – Sol – Lá</p>
+                        <p class="font-mono bg-brand-green/70 p-2 rounded"><strong>Am Menor:</strong> Lá – Dó – Ré – Mi – Sol</p>
+                    </div>
+                </div>
+                <!-- H. V e III Graus -->
+                <div class="card p-6 rounded-2xl shadow-lg reveal">
+                    <h3 class="font-bold text-xl mb-3"><span class="text-brand-rose">H.</span> Pentatônicas do V e III Graus</h3>
+                    <p class="mb-4 text-sm">Trabalhamos com D Maior (V) e Bm Menor (III). Mesma lógica: notas idênticas, mas diferentes centros sonoros para improvisar com confiança.</p>
+                    <div class="space-y-2 text-sm">
+                        <p class="font-mono bg-brand-green/70 p-2 rounded"><strong>D Maior:</strong> Ré – Mi – Fá# – Lá – Si</p>
+                        <p class="font-mono bg-brand-green/70 p-2 rounded"><strong>Bm Menor:</strong> Si – Ré – Mi – Fá# – Lá</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Exercicios -->
+        <section id="exercicios" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 reveal"><span class="text-brand-apricot">I.</span> Exercícios de Improvisação</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 reveal">Agora que dominamos as ferramentas, chegou o momento da improvisação! Cada exercício tem uma base em áudio de 5 minutos para você praticar.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Exercícios 1 a 11 -->
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">1. Progressão I – VIm</p>
+                    <audio controls src="01_G_Em_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">2. Progressão I – IIm</p>
+                    <audio controls src="02_G_Am_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">3. Progressão I – IV</p>
+                    <audio controls src="03_G_C_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">4. Progressão I – V7sus4</p>
+                    <audio controls src="04_G_D7sus4_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">5. Progressão I – IIIm</p>
+                    <audio controls src="05_G_Bm_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">6. Progressão I – V7</p>
+                    <audio controls src="06_G_D7_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">7. Progressão I – VI – IV – V7</p>
+                    <audio controls src="07_G_Em_C_D7sus_Render.mp3"></audio>
+                </div>
+                 <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">8. Progressão I – IIIm – VIm – V7</p>
+                    <audio controls src="08_G_Bm_Em_D7_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">9. Progressão I – IIIm – IV – V7sus4</p>
+                    <audio controls src="09_G_Bm_C_D7sus4_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg md:col-span-2 lg:col-span-1 reveal">
+                    <p class="font-bold text-lg">10. Progressão Longa I</p>
+                    <p class="text-xs font-mono">I–IIIm–VIm–V7–VIm–V–IV–IIm</p>
+                    <audio controls src="10_G_Bm_C_D7sus4_Em_D_C_Am_Render.mp3"></audio>
+                </div>
+                <div class="card p-5 rounded-2xl shadow-lg reveal">
+                    <p class="font-bold text-lg">11. Improvisação Livre</p>
+                    <audio controls src="11_DoceNome_Render.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="card p-8 rounded-2xl shadow-lg mt-12 reveal bg-brand-green/50">
+                <h3 class="font-bold text-2xl mb-4 text-brand-rose">🎧 Dicas para Improvisar:</h3>
+                <ul class="space-y-3 list-disc list-inside">
+                    <li>Use as pentatônicas como base. Elas são seguras e soam bem.</li>
+                    <li>Evite sempre subir e descer a escala na ordem. Experimente quebrar a ordem das notas.</li>
+                    <li>Escute os outros. Improvisar é também ouvir!</li>
+                    <li>Use repetições, pausas e variações rítmicas. Menos pode ser mais.</li>
+                    <li>Comece simples. A beleza da improvisação está muitas vezes na simplicidade bem colocada.</li>
+                    <li>Lembre-se: não há certo ou errado absoluto, mas sim caminhos mais ou menos musicais.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section: Finalizacao -->
+        <section id="finalizacao" class="text-center scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Finalização e Próximos Passos</h2>
+            <p class="max-w-4xl mx-auto mb-6 reveal">Este curso é uma porta de entrada para a liberdade musical. Ao final deste workshop, você estará apto a reconhecer e tocar escalas e arpejos, aplicar as pentatônicas e improvisar com segurança, desenvolvendo sua própria voz musical no contexto da música cristã contemporânea.</p>
+            <p class="text-2xl font-bold text-brand-rose reveal">Bons estudos e boa improvisação!</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-green mt-20">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-800">
+            <p>&copy; Professor Glauber Santiago 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            mobileMenu.addEventListener('click', (e) => {
+                if(e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+
+            // --- Nav Link Active State on Scroll ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('#nav-menu a');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4 // 40% of the section must be visible
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+
+            // --- Reveal elements on scroll ---
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+            
+            console.log("Aplicação carregada e links atualizados para o GitHub.");
+        });
+    </script>
+
+</body>
+
+</html>
